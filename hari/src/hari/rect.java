@@ -1,0 +1,12 @@
+package hari;
+
+public class rect {
+
+	public static void main(String[] args) {
+        int l=5,b=6,c;
+		
+		c=l*b;
+		System.out.println("Area of rectangle = " +c);
+	}
+
+}

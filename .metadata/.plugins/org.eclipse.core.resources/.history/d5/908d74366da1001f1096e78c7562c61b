@@ -1,0 +1,34 @@
+package dzxc;
+
+import java.io.IOException;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
+
+public class bank {
+
+		public static void main(String[] args) throws IOException {
+			System.setProperty("webdriver..chrome.driver", "C:\\Users\\Digital\\Desktop\\Selenium\\chromedriver.exe");
+			
+			WebDriver driver=new ChromeDriver();
+			
+			driver.get("https://demo.guru99.com/test/drag_drop.html");
+			
+			WebElement From= driver.findElement(By.xpath("//*[@id=\"credit2\"]/a"));
+			WebElement To= driver.findElement(By.xpath("//*[@id=\"shoppingCart1\"]/h3"));
+			Actions act = new Actions(driver);
+			act.dragAndDrop(From, To).build().perform();
+			
+			WebElement From1= driver.findElement(By.xpath("//*[@id=\"fourth\"]/a"));
+			WebElement To1= driver.findElement(By.xpath("//*[@id=\"shoppingCart4\"]/h3"));
+			Actions act1 = new Actions(driver);
+			act1.dragAndDrop(From, To).build().perform();
+
+
+	}
+
+}
